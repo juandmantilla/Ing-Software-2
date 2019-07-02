@@ -23,9 +23,10 @@ public class Principal {
 			
 			break;
 		case "Acerca":
-			System.out.println("Juego desarrollado por Juan Mantilla y Felipe Peña");
+			System.out.println("Juego desarrollado por Juan Mantilla y Felipe Peña ...");
 			break;
 		case "Salir":
+			/* Sale del juego*/
 			System.exit(0);
 			break;
 
