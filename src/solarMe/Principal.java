@@ -18,6 +18,8 @@ public class Principal {
 			/* Mostrar niveles */
 			
 			System.out.println("El nivel actual es el Sol ");
+			OA objeto = new OA();
+			objeto.imprimirInformacion();
 			
 			break;
 		case "Acerca":
