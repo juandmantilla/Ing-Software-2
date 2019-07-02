@@ -10,5 +10,10 @@ public class OA
 		
 	}
 	
+	public String getNombre()
+	{
+		return this.nombre;
+	}
+	
 	
 }
