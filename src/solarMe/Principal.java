@@ -19,7 +19,8 @@ public class Principal {
 			
 			System.out.println("El nivel actual es el Sol ");
 			OA objeto = new OA();
-			objeto.imprimirInformacion();
+			Cuestionario preguntas = new Cuestionario();
+			preguntas.imprimirPregunta(objeto.getNombre());
 			
 			break;
 		case "Acerca":

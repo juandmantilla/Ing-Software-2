@@ -18,6 +18,7 @@ public class OA
 		this.informacion = informacion;
 	}
 	
+	//Constructor por defecto
 	public OA()
 	{
 		this.nombre = "Sol";
@@ -72,7 +73,7 @@ public class OA
 	}
 	
 	
-	public void imprimirNombe()
+	public void imprimirNombre()
 	{
 		System.out.println(this.nombre);
 	}
