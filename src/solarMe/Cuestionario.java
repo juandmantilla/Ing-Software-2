@@ -37,35 +37,41 @@ public class Cuestionario
 			break;
 		default:
 			break;
-		
-		
 		}
 	}
 	
-	public void agregarPregunta(String OA)
+	public void agregarPregunta(String OA, String pregunta)
 	{
 		switch (OA) {
 		case "Sol":
-			hashPreguntas.put("Sol", "¿Cuántas veces cabe la tierra en el sol? ");
-			hashPreguntas.put("Sol", "¿Cuál es el combustible del sol? ");
+			hashPreguntas.put("Sol",pregunta);
 			break;
 		case "Mercurio":
+			hashPreguntas.put("Mercurio",pregunta);
 			break;
 		case "Venus" :
+			hashPreguntas.put("Venus",pregunta);
 			break;
 		case "Tierra":
+			hashPreguntas.put("Tierra",pregunta);
 			break;
 		case "Marte":
+			hashPreguntas.put("Marte",pregunta);
 			break;
 		case "Jupiter":
+			hashPreguntas.put("Jupiter",pregunta);
 			break;
 		case "Saturno":
+			hashPreguntas.put("Saturno",pregunta);
 			break;
 		case "Urano":
+			hashPreguntas.put("Urano",pregunta);
 			break;
 		case "Neptuno":
+			hashPreguntas.put("Neptuno",pregunta);
 			break;
 		case "Plutón":
+			hashPreguntas.put("Plutón",pregunta);
 			break;
 		default:
 			break;
