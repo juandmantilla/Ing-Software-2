@@ -82,7 +82,6 @@ public class OA
 		return this.informacion;
 	}
 	
-	
 	public void imprimirNombreOA()
 	{
 		System.out.println(this.nombre);
@@ -93,6 +92,7 @@ public class OA
 		System.out.println(this.informacion);
 	}
 
+	// Carga la información de los planetas desde los archivos txt
 	public String cargarArchivo(String direccion)
 	{
 			String texto = "";
