@@ -17,9 +17,9 @@ public class Principal {
 		/* Menu de juego */
 		switch (entrada) {
 		case "1":
-			OA objeto = new OA("Sol");
-			System.out.println("Está en el " + objeto.getNombre());
-			System.out.println(objeto.cargarInformacion());
+			OA objeto = new OA("Mercurio");
+			System.out.println("Está en  " + objeto.getNombre());
+			
 			
 			break;
 		case "2":

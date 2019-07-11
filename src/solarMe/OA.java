@@ -49,22 +49,31 @@ public class OA
 			this.informacion = cargarArchivo("infoPlanetas/sol.txt");
 			break;
 		case "Mercurio":
+			this.informacion = cargarArchivo("infoPlanetas/mercurio.txt");
 			break;
 		case "Venus":
+			this.informacion = cargarArchivo("infoPlanetas/venus.txt");
 			break;
 		case "Tierra":
+			this.informacion = cargarArchivo("infoPlanetas/tierra.txt");
 			break;
 		case "Marte":
+			this.informacion = cargarArchivo("infoPlanetas/marte.txt");
 			break;
 		case "Jupiter":
+			this.informacion = cargarArchivo("infoPlanetas/jupiter.txt");
 			break;
 		case "Saturno":
+			this.informacion = cargarArchivo("infoPlanetas/saturno.txt");
 			break;
 		case "Urano":
+			this.informacion = cargarArchivo("infoPlanetas/urano.txt");
 			break;
 		case "Neptuno":
+			this.informacion = cargarArchivo("infoPlanetas/neptuno.txt");
 			break;
 		case "Plutón":
+			this.informacion = cargarArchivo("infoPlanetas/pluton.txt");
 			break;
 		default :
 			break;
