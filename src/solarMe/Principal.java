@@ -8,25 +8,24 @@ public class Principal {
 			
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Bienvenido a SolarMe");
-		System.out.println("Qué quiere hacer?");
+		System.out.println("Seleccione lo que desee realizar");
+		System.out.println("1) Jugar");
+		System.out.println("2) Acerca");
+		System.out.println("3) Salir");
 		String entrada = scanner.nextLine();
 		
 		/* Menu de juego */
 		switch (entrada) {
-		case "Jugar":
-			System.out.println("Empiece el juego");
-			/* Mostrar niveles */
-			
-			System.out.println("El nivel actual es el Sol ");
-			OA objeto = new OA();
-			Cuestionario preguntas = new Cuestionario();
-			preguntas.imprimirPregunta(objeto.getNombre());
+		case "1":
+			OA objeto = new OA("Sol");
+			System.out.println("Está en el " + objeto.getNombre());
+			System.out.println(objeto.cargarInformacion());
 			
 			break;
-		case "Acerca":
+		case "2":
 			System.out.println("Juego desarrollado por Juan Mantilla y Felipe Peña ...");
 			break;
-		case "Salir":
+		case "3":
 			/* Sale del juego*/
 			System.exit(0);
 			break;
