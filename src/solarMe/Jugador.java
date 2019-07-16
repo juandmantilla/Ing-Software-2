@@ -2,8 +2,8 @@ package solarMe;
 
 public class Jugador
 {
-	private String nombreJugador ;
-	private int puntaje;
+	private String nombreJugador;
+	private int puntaje = 0;
 	
 	public Jugador(String nombreJugador, int puntaje)
 	{
