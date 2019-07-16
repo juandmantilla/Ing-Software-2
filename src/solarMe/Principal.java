@@ -31,6 +31,10 @@ public class Principal {
 				objeto.cargarInformacion();
 				objeto.imprimirInformacion();
 				break;
+			case "2":
+				
+				break;
+			
 			default:
 				break;
 			}

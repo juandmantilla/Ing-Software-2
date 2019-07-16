@@ -1,6 +1,5 @@
 package solarMe;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 
 
@@ -15,7 +14,7 @@ public class Cuestionario
 	}
 	
 	//Método que imprime preguntas dependiendo del OA que lo solicite
-	public void imprimirPregunta(String OA)
+	public void imprimirPregunta(String OA )
 	{
 		switch (OA) {
 		case "Sol":
