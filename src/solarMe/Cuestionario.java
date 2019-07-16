@@ -9,10 +9,11 @@ public class Cuestionario
 {
 	private HashMap<String,String> listaPreguntas = new HashMap<String, String>();
 	
-	public Cuestionario()
+	public Cuestionario(OA objeto )
 	{
 		
 	}
+	
 	//Método que imprime preguntas dependiendo del OA que lo solicite
 	public void imprimirPregunta(String OA)
 	{
