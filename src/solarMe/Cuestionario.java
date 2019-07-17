@@ -1,8 +1,10 @@
+/* Esta clase define cada uno de los cuestionarios de los 
+ * OA correspondientes. 
+ * @author : Juan Mantilla - Felipe Peña	
+ * @version : 17 de Julio de 2019
+ *  */
 package solarMe;
-
 import java.util.HashMap;
-
-
 
 public class Cuestionario
 {

@@ -1,3 +1,8 @@
 Llamamos Sol a la estrella más cercana a nuestro planeta (149,6 millones de kilómetros).
 A su alrededor orbitan todos los planetas del Sistema Solar, atraídos por su gravedad,
- así como los cometas y asteroides que los acompañan.2
+así como los cometas y asteroides que los acompañan.
+
+
+Núcleo. La región más interna. Ocupa una quinta parte de la estrella, 
+unos 139.000 km de su radio total.
+ Es donde ocurre la gigantesca explosión atómica que es el Sol. Es tal la gravedad que hay en el núcleo, que a la energía producida de esta manera le toma un millón de años ascender hasta la superficie.

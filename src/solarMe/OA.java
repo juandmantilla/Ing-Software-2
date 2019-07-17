@@ -1,7 +1,7 @@
 /* Esta clase define el objeto astronómico
  * devuelve información y preguntasl del objeto seleccionado
  * @author : Juan Mantilla - Felipe Peña	
- * @version : 11 de Julio de 2019
+ * @version : 17 de Julio de 2019
  *  */
 
 
@@ -21,7 +21,6 @@ public class OA
 	{
 		this.nombre = "Defecto";
 		this.informacion = "Escoja un pláneta para empezar a jugar";
-		
 	}
 	
 
@@ -40,7 +39,7 @@ public class OA
 		this.nombre = nombre;
 	}
 	
-	/* Este método carga la información del OA*/
+	/* Este método carga la información del OA a través de un archivo de texto externo*/
 	public String cargarInformacion()
 	{	
 		switch (this.nombre)
