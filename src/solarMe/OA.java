@@ -22,7 +22,6 @@ public class OA
 		this.nombre = "Defecto";
 		this.informacion = "Escoja un pláneta para empezar a jugar";
 	}
-	
 
 	public OA(String nombre)
 	{

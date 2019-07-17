@@ -42,6 +42,7 @@ public class Juego
 				{
 				case "1":
 					
+					
 					break;
 				case "2":
 					

@@ -10,7 +10,7 @@ public class Cuestionario
 {
 	private HashMap<String,String> listaPreguntas = new HashMap<String, String>();
 	
-	public Cuestionario(OA objeto )
+	public Cuestionario()
 	{
 		
 	}
