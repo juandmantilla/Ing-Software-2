@@ -29,6 +29,10 @@ public class OA
 		this.estado = estado;
                 //comentario
 	}
+        
+        public void cosas(){
+            int x=0;
+        }
 	
 	public String getNombre()
 	{
