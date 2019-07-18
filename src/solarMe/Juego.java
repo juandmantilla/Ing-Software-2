@@ -8,16 +8,21 @@ package solarMe;
 import java.util.Scanner;
 
 public class Juego 
-{
+{	
+	// Objeto Planetario de inicio del juego
 	OA objeto = new OA("Sol",true);
 	
+	//Lector de Scanner
 	Scanner scanner = new Scanner(System.in);
+	
+	//Las variables entrada1 y entrada2 almacenan las entrada de teclado del jugador
 	String entrada, entrada2;
 	
-	// Constructor de Juego
+	// Constructor de Juego, inicialización de variables
 	public Juego()
 	{
 		this.entrada = "";
+		this.entrada2 = "";
 	}
 	
 	//Método que lanza el menú principal del juego
@@ -31,10 +36,10 @@ public class Juego
 			System.out.println("1) Jugar");
 			System.out.println("2) Acerca");
 			System.out.println("3) Salir");
-			entrada = scanner.nextLine();
+			entrada2 = scanner.nextLine();
 			
 			/* Menú de juego */
-			switch (entrada) 
+			switch (entrada2) 
 			{
 			case "1":
 				
@@ -57,12 +62,16 @@ public class Juego
 						
 						break;
 					case "2":
-						
+						System.out.println("Esta funcionalidad no se ha completado :(");
+						System.out.println("1) Volver");
+						entrada2 = scanner.nextLine();
+						if(entrada2.equals("1"))
+							entrada2 = "volver";
 						break;
 					case "3":
 						entrada = "volver";
-					default:
 						break;
+					
 					}
 				}while(entrada2.equals("volver"));
 			
