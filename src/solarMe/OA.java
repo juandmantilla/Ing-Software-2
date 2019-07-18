@@ -31,7 +31,7 @@ public class OA
 	}
         
         public void cosas(){
-            int x=0;
+            int x=16;
         }
 	
 	public String getNombre()
