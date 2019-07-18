@@ -27,6 +27,7 @@ public class OA
 	{
 		this.nombre = nombre;
 		this.estado = estado;
+                //comentario
 	}
 	
 	public String getNombre()
