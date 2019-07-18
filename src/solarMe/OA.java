@@ -13,19 +13,20 @@ import java.io.FileReader;
 
 public class OA
 {
+	//Nombre del Objeto Astronómico
 	private String nombre;
+	
+	//Información relacionada al OA 
 	private String informacion;
 	
-	//Constructor por defecto
-	public OA()
-	{
-		this.nombre = "Defecto";
-		this.informacion = "Escoja un pláneta para empezar a jugar";
-	}
+	// Variable estado indica si el objeto se inicializó y se está usando
+	private boolean estado;
 
-	public OA(String nombre)
+
+	public OA(String nombre, boolean estado)
 	{
 		this.nombre = nombre;
+		this.estado = estado;
 	}
 	
 	public String getNombre()
@@ -36,6 +37,16 @@ public class OA
 	public void setNombre(String nombre)
 	{
 		this.nombre = nombre;
+	}
+	
+	public boolean getEstado()
+	{
+		return this.estado;
+	}
+	
+	public void setEstado(boolean estado)
+	{
+		this.estado = estado;
 	}
 	
 	/* Este método carga la información del OA a través de un archivo de texto externo*/

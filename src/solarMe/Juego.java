@@ -9,15 +9,19 @@ import java.util.Scanner;
 
 public class Juego 
 {
-	Scanner scanner = new Scanner(System.in);
-	String entrada;
+	OA objeto = new OA("Sol",true);
 	
+	Scanner scanner = new Scanner(System.in);
+	String entrada, entrada2;
+	
+	// Constructor de Juego
 	public Juego()
 	{
 		this.entrada = "";
 	}
 	
-	public void iniciarJuego()
+	//Método que lanza el menú principal del juego
+	public void lanzarJuego()
 	{
 		do 
 		{
@@ -33,25 +37,34 @@ public class Juego
 			switch (entrada) 
 			{
 			case "1":
-				System.out.println("¿Qué quieres hacer?");
-				System.out.println("1) Jugar");
-				System.out.println("2) Aprender");
-				System.out.println("3) Volver");
-				entrada = scanner.nextLine();
-				switch (entrada)
-				{
-				case "1":
-					
-					
-					break;
-				case "2":
-					
-					break;
-				case "3":
-					entrada = "volver";
-				default:
-					break;
-				}
+				
+				do {
+					System.out.println("¿Qué quieres hacer?");
+					System.out.println("1) Jugar");
+					System.out.println("2) Aprender");
+					System.out.println("3) Volver");
+					entrada2 = scanner.nextLine();
+					switch (entrada2)
+					{
+					case "1":
+						objeto.getNombre();
+						objeto.cargarInformacion();
+						objeto.imprimirInformacion();
+						System.out.println("1) Volver");
+						entrada2 = scanner.nextLine();
+						if(entrada2.equals("1"))
+							entrada2 = "volver";
+						
+						break;
+					case "2":
+						
+						break;
+					case "3":
+						entrada = "volver";
+					default:
+						break;
+					}
+				}while(entrada2.equals("volver"));
 			
 			break;
 			case "2":
@@ -88,6 +101,13 @@ public class Juego
 	
 			}
 		}while(entrada.equals("volver"));
+	
+	
+	
+	
+	
+	
 	}
+
 }
 
