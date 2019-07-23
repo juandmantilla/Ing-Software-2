@@ -1,7 +1,7 @@
 /* Esta clase define cada uno de los cuestionarios de los 
  * OA correspondientes. 
  * @author : Juan Mantilla - Felipe Peña	
- * @version : 17 de Julio de 2019
+ * @version : 23 de Julio de 2019
  *  */
 package solarMe;
 import java.io.BufferedReader;
@@ -14,8 +14,9 @@ public class Cuestionario
 	
 	
 	
-	private String nombreCuestionario ="";
+	private String nombreCuestionario = "";
 	
+	//ArrayList's que guardan las diferentes preguntas
 	private ArrayList<String> preguntasSol = new ArrayList<String>();
 	private ArrayList<String> preguntasMercurio = new ArrayList<String>();
 	private ArrayList<String> preguntasVenus = new ArrayList<String>();
@@ -34,7 +35,8 @@ public class Cuestionario
 	
 		
 	
-	
+	// Carga en los diferentes ArrayList las preguntas de lo OA
+	// Cada pregunta tiene un archivo .txt asociado
 	public void cargarPreguntas()
 	{
 		switch (this.nombreCuestionario) {
@@ -119,7 +121,9 @@ public class Cuestionario
 		}
 	}
 	
-	
+	//Método encargardo de retornar la cadena de caracteres
+	// de archivo de preguntas
+	//@param direccion es una cadena de caracteres para la dirección local del archivo
 	public String cargarArchivo(String direccion)
 	{
 			String texto = "";

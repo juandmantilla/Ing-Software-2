@@ -13,10 +13,12 @@ public class Principal
 	 Juego juego = new Juego();
 	 juego.lanzarJuego();
 	 
+<<<<<<< Updated upstream
 	c1.imprimirPreguntas();
+=======
+>>>>>>> Stashed changes
 	
-	Cuestionario c1 = new Cuestionario(objeto);
-	c1.imprimirPregunta("s1");
+
 			
 	}
 
