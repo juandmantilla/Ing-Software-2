@@ -6,13 +6,26 @@
 package solarMe;
 import java.io.BufferedReader;
 import java.io.FileReader;
-import java.util.HashMap;
+import java.util.ArrayList;
+
 
 public class Cuestionario
 {
 	
+	
+	
 	private String nombreCuestionario ="";
-	private HashMap<String , String> preguntas = new HashMap<String, String>();
+	
+	private ArrayList<String> preguntasSol = new ArrayList<String>();
+	private ArrayList<String> preguntasMercurio = new ArrayList<String>();
+	private ArrayList<String> preguntasVenus = new ArrayList<String>();
+	private ArrayList<String> preguntasTierra = new ArrayList<String>();
+	private ArrayList<String> preguntasMarte = new ArrayList<String>();
+	private ArrayList<String> preguntasJupiter = new ArrayList<String>();
+	private ArrayList<String> preguntasSaturno = new ArrayList<String>();
+	private ArrayList<String> preguntasUrano = new ArrayList<String>();
+	private ArrayList<String> preguntasNeptuno = new ArrayList<String>();
+	private ArrayList<String> preguntasPluton = new ArrayList<String>();
 	
 	public Cuestionario(OA objeto)
 	{
@@ -26,65 +39,80 @@ public class Cuestionario
 	{
 		switch (this.nombreCuestionario) {
 		case "Sol":
-			
-			preguntas.put("s1", cargarArchivo("preguntas/Sol/p1.txt"));
-			preguntas.put("s2", cargarArchivo("preguntas/Sol/p2.txt"));
-			preguntas.put("s3", cargarArchivo("preguntas/Sol/p3.txt"));
-			preguntas.put("s4", cargarArchivo("preguntas/Sol/p4.txt"));
-			preguntas.put("s5", cargarArchivo("preguntas/Sol/p5.txt"));
+			preguntasSol.add( cargarArchivo("preguntas/Sol/p1.txt"));
+			preguntasSol.add( cargarArchivo("preguntas/Sol/p2.txt"));
+			preguntasSol.add( cargarArchivo("preguntas/Sol/p3.txt"));
+			preguntasSol.add( cargarArchivo("preguntas/Sol/p4.txt"));
+			preguntasSol.add( cargarArchivo("preguntas/Sol/p5.txt"));
+		
 			break;
 		case "Mercurio":
-			preguntas.put("mer1", cargarArchivo("preguntas/Mercurio/p1.txt"));
-			preguntas.put("mer2", cargarArchivo("preguntas/Mercurio/p2.txt"));
-			preguntas.put("mer3", cargarArchivo("preguntas/Mercurio/p3.txt"));
-			preguntas.put("mer4", cargarArchivo("preguntas/Mercurio/p4.txt"));
-			preguntas.put("mer5", cargarArchivo("preguntas/Mercurio/p5.txt"));
+			preguntasMercurio.add( cargarArchivo("preguntas/Mercurio/p1.txt"));
+			preguntasMercurio.add( cargarArchivo("preguntas/Mercurio/p2.txt"));
+			preguntasMercurio.add( cargarArchivo("preguntas/Mercurio/p3.txt"));
+			preguntasMercurio.add( cargarArchivo("preguntas/Mercurio/p4.txt"));
+			preguntasMercurio.add( cargarArchivo("preguntas/Mercurio/p5.txt"));
 			break;
 		case "Venus":
-			preguntas.put("v1", cargarArchivo("preguntas/Venus/p1.txt"));
-			preguntas.put("v2", cargarArchivo("preguntas/Venus/p2.txt"));
-			preguntas.put("v3", cargarArchivo("preguntas/Venus/p3.txt"));
-			preguntas.put("v4", cargarArchivo("preguntas/Venus/p4.txt"));
-			preguntas.put("v5", cargarArchivo("preguntas/Venus/p5.txt"));
+			preguntasVenus.add( cargarArchivo("preguntas/Venus/p1.txt"));
+			preguntasVenus.add( cargarArchivo("preguntas/Venus/p2.txt"));
+			preguntasVenus.add( cargarArchivo("preguntas/Venus/p3.txt"));
+			preguntasVenus.add( cargarArchivo("preguntas/Venus/p4.txt"));
+			preguntasVenus.add( cargarArchivo("preguntas/Venus/p5.txt"));
 			break;
 		case "Tierra":
-			preguntas.put("t1", cargarArchivo("preguntas/Tierra/p1.txt"));
-			preguntas.put("t2", cargarArchivo("preguntas/Tierra/p2.txt"));
-			preguntas.put("t3", cargarArchivo("preguntas/Tierra/p3.txt"));
-			preguntas.put("t4", cargarArchivo("preguntas/Tierra/p4.txt"));
-			preguntas.put("t5", cargarArchivo("preguntas/Tierra/p5.txt"));
+			preguntasTierra.add( cargarArchivo("preguntas/Tierra/p1.txt"));
+			preguntasTierra.add( cargarArchivo("preguntas/Tierra/p2.txt"));
+			preguntasTierra.add( cargarArchivo("preguntas/Tierra/p3.txt"));
+			preguntasTierra.add( cargarArchivo("preguntas/Tierra/p4.txt"));
+			preguntasTierra.add( cargarArchivo("preguntas/Tierra/p5.txt"));
 			break;
 		case "Marte":
-			preguntas.put("mar1", cargarArchivo("preguntas/Marte/p1.txt"));
-			preguntas.put("mar2", cargarArchivo("preguntas/Marte/p2.txt"));
-			preguntas.put("mar3", cargarArchivo("preguntas/Marte/p3.txt"));
-			preguntas.put("mar4", cargarArchivo("preguntas/Marte/p4.txt"));
-			preguntas.put("mar5", cargarArchivo("preguntas/Marte/p5.txt"));
+			preguntasMarte.add( cargarArchivo("preguntas/Marte/p1.txt"));
+			preguntasMarte.add( cargarArchivo("preguntas/Marte/p2.txt"));
+			preguntasMarte.add( cargarArchivo("preguntas/Marte/p3.txt"));
+			preguntasMarte.add( cargarArchivo("preguntas/Marte/p4.txt"));
+			preguntasMarte.add( cargarArchivo("preguntas/Marte/p5.txt"));
+			
 			break;
 		case "Jupiter":
-			preguntas.put("j1", cargarArchivo("preguntas/Jupiter/p1.txt"));
-			preguntas.put("j2", cargarArchivo("preguntas/Jupiter/p2.txt"));
-			preguntas.put("j3", cargarArchivo("preguntas/Jupiter/p3.txt"));
-			preguntas.put("j4", cargarArchivo("preguntas/Jupiter/p4.txt"));
-			preguntas.put("j5", cargarArchivo("preguntas/Jupiter/p5.txt"));
+			preguntasJupiter.add( cargarArchivo("preguntas/Jupiter/p1.txt"));
+			preguntasJupiter.add( cargarArchivo("preguntas/Jupiter/p2.txt"));
+			preguntasJupiter.add( cargarArchivo("preguntas/Jupiter/p3.txt"));
+			preguntasJupiter.add( cargarArchivo("preguntas/Jupiter/p4.txt"));
+			preguntasJupiter.add( cargarArchivo("preguntas/Jupiter/p5.txt"));
+			
 			break;
 		case "Saturno":
-			preguntas.put("sat1", cargarArchivo("preguntas/Saturno/p1.txt"));
-			preguntas.put("sat2", cargarArchivo("preguntas/Saturno/p2.txt"));
-			preguntas.put("sat3", cargarArchivo("preguntas/Saturno/p3.txt"));
-			preguntas.put("sat4", cargarArchivo("preguntas/Saturno/p4.txt"));
-			preguntas.put("sat5", cargarArchivo("preguntas/Saturno/p5.txt"));
+			preguntasSaturno.add( cargarArchivo("preguntas/Saturno/p1.txt"));
+			preguntasSaturno.add( cargarArchivo("preguntas/Saturno/p2.txt"));
+			preguntasSaturno.add( cargarArchivo("preguntas/Saturno/p3.txt"));
+			preguntasSaturno.add( cargarArchivo("preguntas/Saturno/p4.txt"));
+			preguntasSaturno.add( cargarArchivo("preguntas/Saturno/p5.txt"));
+			
 			break;
 		case "Urano":
-			preguntas.put("u1", cargarArchivo("preguntas/Urano/p1.txt"));
-			preguntas.put("u2", cargarArchivo("preguntas/Urano/p2.txt"));
-			preguntas.put("u3", cargarArchivo("preguntas/Urano/p3.txt"));
-			preguntas.put("u4", cargarArchivo("preguntas/Urano/p4.txt"));
-			preguntas.put("u5", cargarArchivo("preguntas/Urano/p5.txt"));
+			preguntasUrano.add( cargarArchivo("preguntas/Urano/p1.txt"));
+			preguntasUrano.add( cargarArchivo("preguntas/Urano/p2.txt"));
+			preguntasUrano.add( cargarArchivo("preguntas/Urano/p3.txt"));
+			preguntasUrano.add( cargarArchivo("preguntas/Urano/p3.txt"));
+			preguntasUrano.add( cargarArchivo("preguntas/Urano/p4.txt"));
 			break;
 		case "Neptuno":
+			preguntasNeptuno.add( cargarArchivo("preguntas/Neptuno/p1.txt"));
+			preguntasNeptuno.add( cargarArchivo("preguntas/Neptuno/p2.txt"));
+			preguntasNeptuno.add( cargarArchivo("preguntas/Neptuno/p3.txt"));
+			preguntasNeptuno.add( cargarArchivo("preguntas/Neptuno/p4.txt"));
+			preguntasNeptuno.add( cargarArchivo("preguntas/Neptuno/p5.txt"));
+			
 			break;
 		case "Pluton":
+			preguntasPluton.add( cargarArchivo("preguntas/Pluton/p1.txt"));
+			preguntasPluton.add( cargarArchivo("preguntas/Pluton/p2.txt"));
+			preguntasPluton.add( cargarArchivo("preguntas/Pluton/p3.txt"));
+			preguntasPluton.add( cargarArchivo("preguntas/Pluton/p4.txt"));
+			preguntasPluton.add( cargarArchivo("preguntas/Pluton/p5.txt"));
+			
 			break;
 		default:
 			break;
@@ -116,9 +144,9 @@ public class Cuestionario
 		return texto;
 	}
 
-	public void imprimirPreguntas()
+	public void imprimirPregunta(String pregunta)
 	{
-		System.out.println(preguntas);
+		
 	}
 }
 
