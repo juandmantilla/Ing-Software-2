@@ -62,9 +62,7 @@ public class Juego
 						
 						break;
 					case "2":
-						System.out.println("Esta funcionalidad no se ha completado :(");
-						System.out.println("1) Volver");
-						entrada2 = scanner.nextLine();
+						
 						if(entrada2.equals("1"))
 							entrada2 = "volver";
 						break;

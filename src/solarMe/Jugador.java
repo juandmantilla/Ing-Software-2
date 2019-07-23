@@ -16,8 +16,6 @@ public class Jugador
 		this.puntaje = puntaje;
 	}
 	
-
-	
 	public void setPuntaje(int puntaje )
 	{
 		this.puntaje = puntaje;
