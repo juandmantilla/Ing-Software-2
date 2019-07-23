@@ -8,13 +8,13 @@ package solarMe;
 public class Jugador
 {
 	
-	private int puntaje = 0;
+	private int puntaje;
 	
 	//@param puntaje variable responsable de asignar el puntaje al comienzo del juego
-	public Jugador(int puntaje)
+	public Jugador()
 	{
 		
-		this.puntaje = puntaje;
+		this.puntaje = 0;
 	}
 	
 	

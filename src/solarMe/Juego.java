@@ -12,10 +12,11 @@ public class Juego
 	// Objeto Planetario de inicio del juego
 	OA objeto = new OA("Sol",true);
 	
-	
-	
 	//Lector de Scanner
 	Scanner scanner = new Scanner(System.in);
+	
+	//Objeto de Jugador
+	Jugador jugador = new Jugador();
 	
 	//Las variables entrada1 y entrada2 almacenan las entrada de teclado del jugador
 	String entrada, entrada2;
@@ -69,16 +70,19 @@ public class Juego
 						c1.cargarPreguntas();
 						while(i<=3)
 						{
+							c1.cargarPreguntas();
 							c1.imprimirPregunta(objeto, i);
+							c1.cargarRespuestas();
 							System.out.println("Teclee la respuesta");
 							entrada = scanner.nextLine();
 							if(entrada.equals(c1.getRespuesta(objeto, i)))
 							{
 								System.out.println("Ha ganado 1 punto");
+								
 							}
 							else
 							{
-								System.out.println("Ha fallado en la respuesta");
+								System.out.println("No ha ganado ningún punto");
 							}
 							i++;
 						}
