@@ -34,18 +34,53 @@ public class Cuestionario
 			preguntas.put("s5", cargarArchivo("preguntas/Sol/p5.txt"));
 			break;
 		case "Mercurio":
+			preguntas.put("mer1", cargarArchivo("preguntas/Mercurio/p1.txt"));
+			preguntas.put("mer2", cargarArchivo("preguntas/Mercurio/p2.txt"));
+			preguntas.put("mer3", cargarArchivo("preguntas/Mercurio/p3.txt"));
+			preguntas.put("mer4", cargarArchivo("preguntas/Mercurio/p4.txt"));
+			preguntas.put("mer5", cargarArchivo("preguntas/Mercurio/p5.txt"));
 			break;
 		case "Venus":
+			preguntas.put("v1", cargarArchivo("preguntas/Venus/p1.txt"));
+			preguntas.put("v2", cargarArchivo("preguntas/Venus/p2.txt"));
+			preguntas.put("v3", cargarArchivo("preguntas/Venus/p3.txt"));
+			preguntas.put("v4", cargarArchivo("preguntas/Venus/p4.txt"));
+			preguntas.put("v5", cargarArchivo("preguntas/Venus/p5.txt"));
 			break;
 		case "Tierra":
+			preguntas.put("t1", cargarArchivo("preguntas/Tierra/p1.txt"));
+			preguntas.put("t2", cargarArchivo("preguntas/Tierra/p2.txt"));
+			preguntas.put("t3", cargarArchivo("preguntas/Tierra/p3.txt"));
+			preguntas.put("t4", cargarArchivo("preguntas/Tierra/p4.txt"));
+			preguntas.put("t5", cargarArchivo("preguntas/Tierra/p5.txt"));
 			break;
 		case "Marte":
+			preguntas.put("mar1", cargarArchivo("preguntas/Marte/p1.txt"));
+			preguntas.put("mar2", cargarArchivo("preguntas/Marte/p2.txt"));
+			preguntas.put("mar3", cargarArchivo("preguntas/Marte/p3.txt"));
+			preguntas.put("mar4", cargarArchivo("preguntas/Marte/p4.txt"));
+			preguntas.put("mar5", cargarArchivo("preguntas/Marte/p5.txt"));
 			break;
 		case "Jupiter":
+			preguntas.put("j1", cargarArchivo("preguntas/Jupiter/p1.txt"));
+			preguntas.put("j2", cargarArchivo("preguntas/Jupiter/p2.txt"));
+			preguntas.put("j3", cargarArchivo("preguntas/Jupiter/p3.txt"));
+			preguntas.put("j4", cargarArchivo("preguntas/Jupiter/p4.txt"));
+			preguntas.put("j5", cargarArchivo("preguntas/Jupiter/p5.txt"));
 			break;
 		case "Saturno":
+			preguntas.put("sat1", cargarArchivo("preguntas/Saturno/p1.txt"));
+			preguntas.put("sat2", cargarArchivo("preguntas/Saturno/p2.txt"));
+			preguntas.put("sat3", cargarArchivo("preguntas/Saturno/p3.txt"));
+			preguntas.put("sat4", cargarArchivo("preguntas/Saturno/p4.txt"));
+			preguntas.put("sat5", cargarArchivo("preguntas/Saturno/p5.txt"));
 			break;
 		case "Urano":
+			preguntas.put("u1", cargarArchivo("preguntas/Urano/p1.txt"));
+			preguntas.put("u2", cargarArchivo("preguntas/Urano/p2.txt"));
+			preguntas.put("u3", cargarArchivo("preguntas/Urano/p3.txt"));
+			preguntas.put("u4", cargarArchivo("preguntas/Urano/p4.txt"));
+			preguntas.put("u5", cargarArchivo("preguntas/Urano/p5.txt"));
 			break;
 		case "Neptuno":
 			break;
