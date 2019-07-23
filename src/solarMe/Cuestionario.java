@@ -11,9 +11,7 @@ import java.util.ArrayList;
 
 public class Cuestionario
 {
-	
-	
-	
+		
 	private String nombreCuestionario = "";
 	
 	//ArrayList's que guardan las diferentes preguntas
@@ -27,6 +25,21 @@ public class Cuestionario
 	private ArrayList<String> preguntasUrano = new ArrayList<String>();
 	private ArrayList<String> preguntasNeptuno = new ArrayList<String>();
 	private ArrayList<String> preguntasPluton = new ArrayList<String>();
+	
+	
+	//ArrayList's que guardan las diferentes respuestas
+	private ArrayList<String> respuestasSol = new ArrayList<String>();
+	private ArrayList<String> respuestasMercurio = new ArrayList<String>();
+	private ArrayList<String> respuestasVenus = new ArrayList<String>();
+	private ArrayList<String> respuestasTierra = new ArrayList<String>();
+	private ArrayList<String> respuestasMarte = new ArrayList<String>();
+	private ArrayList<String> respuestasJupiter = new ArrayList<String>();
+	private ArrayList<String> respuestasSaturno = new ArrayList<String>();
+	private ArrayList<String> respuestasUrano = new ArrayList<String>();
+	private ArrayList<String> respuestasNeptuno = new ArrayList<String>();
+	private ArrayList<String> respuestasPluton = new ArrayList<String>();
+	
+	
 	
 	public Cuestionario(OA objeto)
 	{
@@ -121,9 +134,9 @@ public class Cuestionario
 		}
 	}
 	
-	//Método encargardo de retornar la cadena de caracteres
+	// Método encargardo de retornar la cadena de caracteres
 	// de archivo de preguntas
-	//@param direccion es una cadena de caracteres para la dirección local del archivo
+	// @param direccion es una cadena de caracteres para la dirección local del archivo
 	public String cargarArchivo(String direccion)
 	{
 			String texto = "";
@@ -148,9 +161,45 @@ public class Cuestionario
 		return texto;
 	}
 
-	public void imprimirPregunta(String pregunta)
+	//Imprime la pregunta especificada para cada planeta
+	//@param objeto corresponte de un OA
+	//@param numPregunta indica el número de la pregunta
+	public void imprimirPregunta(OA objeto, int numPregunta)
 	{
-		
+		switch (objeto.getNombre()) {
+		case "Sol":
+			System.out.println(preguntasSol.get(numPregunta));
+			break;
+		case "Mercurio":
+			System.out.println(preguntasMercurio .get(numPregunta));
+			break;
+		case "Venus":
+			System.out.println(preguntasVenus.get(numPregunta));
+			break;
+		case "Tierra":
+			System.out.println(preguntasTierra.get(numPregunta));
+			break;
+		case "Marte":
+			System.out.println(preguntasMarte.get(numPregunta));
+			break;
+		case "Jupiter":
+			System.out.println(preguntasJupiter.get(numPregunta));
+			break;
+		case "Saturno":
+			System.out.println(preguntasSaturno.get(numPregunta));
+			break;
+		case "Urano":
+			System.out.println(preguntasUrano.get(numPregunta));
+			break;
+		case "Neptuno":
+			System.out.println(preguntasNeptuno.get(numPregunta));
+			break;
+		case "Pluton":
+			System.out.println(preguntasPluton.get(numPregunta));
+			break;
+			
+
+		}
 	}
 	
 	public void imprimirPreguntaOA(OA objeto) {
@@ -228,6 +277,129 @@ public class Cuestionario
 		
 	}
 	
+	//Cargar Respuestas en ArrayList's 
+	public void cargarRespuestas()
+	{
+		switch (this.nombreCuestionario) {
+		case "Sol":
+			respuestasSol.add( cargarArchivo("preguntas/Sol/r1.txt"));
+			respuestasSol.add( cargarArchivo("preguntas/Sol/r2.txt"));
+			respuestasSol.add( cargarArchivo("preguntas/Sol/r3.txt"));
+			respuestasSol.add( cargarArchivo("preguntas/Sol/r4.txt"));
+			respuestasSol.add( cargarArchivo("preguntas/Sol/r5.txt"));
+		
+			break;
+		case "Mercurio":
+			respuestasMercurio.add( cargarArchivo("preguntas/Mercurio/r1.txt"));
+			respuestasMercurio.add( cargarArchivo("preguntas/Mercurio/r2.txt"));
+			respuestasMercurio.add( cargarArchivo("preguntas/Mercurio/r3.txt"));
+			respuestasMercurio.add( cargarArchivo("preguntas/Mercurio/r4.txt"));
+			respuestasMercurio.add( cargarArchivo("preguntas/Mercurio/r5.txt"));
+			break;
+		case "Venus":
+			respuestasVenus.add( cargarArchivo("preguntas/Venus/r1.txt"));
+			respuestasVenus.add( cargarArchivo("preguntas/Venus/r2.txt"));
+			respuestasVenus.add( cargarArchivo("preguntas/Venus/r3.txt"));
+			respuestasVenus.add( cargarArchivo("preguntas/Venus/r4.txt"));
+			respuestasVenus.add( cargarArchivo("preguntas/Venus/r5.txt"));
+			break;
+		case "Tierra":
+			respuestasTierra.add( cargarArchivo("preguntas/Tierra/r1.txt"));
+			respuestasTierra.add( cargarArchivo("preguntas/Tierra/r2.txt"));
+			respuestasTierra.add( cargarArchivo("preguntas/Tierra/r3.txt"));
+			respuestasTierra.add( cargarArchivo("preguntas/Tierra/r4.txt"));
+			respuestasTierra.add( cargarArchivo("preguntas/Tierra/r5.txt"));
+			break;
+		case "Marte":
+			respuestasMarte.add( cargarArchivo("preguntas/Marte/r1.txt"));
+			respuestasMarte.add( cargarArchivo("preguntas/Marte/r2.txt"));
+			respuestasMarte.add( cargarArchivo("preguntas/Marte/r3.txt"));
+			respuestasMarte.add( cargarArchivo("preguntas/Marte/r4.txt"));
+			respuestasMarte.add( cargarArchivo("preguntas/Marte/r5.txt"));
+			
+			break;
+		case "Jupiter":
+			respuestasJupiter.add( cargarArchivo("preguntas/Jupiter/r1.txt"));
+			respuestasJupiter.add( cargarArchivo("preguntas/Jupiter/r2.txt"));
+			respuestasJupiter.add( cargarArchivo("preguntas/Jupiter/r3.txt"));
+			respuestasJupiter.add( cargarArchivo("preguntas/Jupiter/r4.txt"));
+			respuestasJupiter.add( cargarArchivo("preguntas/Jupiter/r5.txt"));
+			
+			break;
+		case "Saturno":
+			respuestasSaturno.add( cargarArchivo("preguntas/Saturno/r1.txt"));
+			respuestasSaturno.add( cargarArchivo("preguntas/Saturno/r2.txt"));
+			respuestasSaturno.add( cargarArchivo("preguntas/Saturno/r3.txt"));
+			respuestasSaturno.add( cargarArchivo("preguntas/Saturno/r4.txt"));
+			respuestasSaturno.add( cargarArchivo("preguntas/Saturno/r5.txt"));
+			
+			break;
+		case "Urano":
+			respuestasUrano.add( cargarArchivo("preguntas/Urano/r1.txt"));
+			respuestasUrano.add( cargarArchivo("preguntas/Urano/r2.txt"));
+			respuestasUrano.add( cargarArchivo("preguntas/Urano/r3.txt"));
+			respuestasUrano.add( cargarArchivo("preguntas/Urano/r3.txt"));
+			respuestasUrano.add( cargarArchivo("preguntas/Urano/r4.txt"));
+			break;
+		case "Neptuno":
+			respuestasNeptuno.add( cargarArchivo("preguntas/Neptuno/r1.txt"));
+			respuestasNeptuno.add( cargarArchivo("preguntas/Neptuno/r2.txt"));
+			respuestasNeptuno.add( cargarArchivo("preguntas/Neptuno/r3.txt"));
+			respuestasNeptuno.add( cargarArchivo("preguntas/Neptuno/r4.txt"));
+			respuestasNeptuno.add( cargarArchivo("preguntas/Neptuno/r5.txt"));
+			
+			break;
+		case "Pluton":
+			respuestasPluton.add( cargarArchivo("preguntas/Pluton/r1.txt"));
+			respuestasPluton.add( cargarArchivo("preguntas/Pluton/r2.txt"));
+			respuestasPluton.add( cargarArchivo("preguntas/Pluton/r3.txt"));
+			respuestasPluton.add( cargarArchivo("preguntas/Pluton/r4.txt"));
+			respuestasPluton.add( cargarArchivo("preguntas/Pluton/r5.txt"));
+			
+			break;
+		
+		}
+
+	}
+
+	public String getRespuesta(OA objeto, int numPregunta)
+	{	String texto = "";
+		switch (objeto.getNombre()) {
+		case "Sol":
+			texto = respuestasSol.get(numPregunta);
+			break;
+		case "Mercurio":
+			texto = respuestasMercurio.get(numPregunta);
+			break;
+		case "Venus":
+			texto = respuestasVenus.get(numPregunta);
+			break;
+		case "Tierra":
+			texto = respuestasTierra.get(numPregunta);
+			break;
+		case "Marte":
+			texto = respuestasMarte.get(numPregunta);
+			break;
+		case "Jupiter":
+			texto = respuestasJupiter.get(numPregunta);
+			break;
+		case "Saturno":
+			texto = respuestasSaturno.get(numPregunta);
+			break;
+		case "Urano":
+			texto = respuestasUrano.get(numPregunta);
+			break;
+		case "Neptuno":
+			texto = respuestasNeptuno.get(numPregunta);
+			break;
+		case "Pluton":
+			texto = respuestasPluton.get(numPregunta);
+			break;
+			
+			
+		}
+		return texto;
+	}
 }
 
 

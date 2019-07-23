@@ -10,11 +10,13 @@ public class Jugador
 	
 	private int puntaje = 0;
 	
+	//@param puntaje variable responsable de asignar el puntaje al comienzo del juego
 	public Jugador(int puntaje)
 	{
 		
 		this.puntaje = puntaje;
 	}
+	
 	
 	public void setPuntaje(int puntaje )
 	{
@@ -25,4 +27,10 @@ public class Jugador
 	{
 		return puntaje;
 	}
+	
+	public void subirNivel(OA objeto)
+	{
+		
+	}
+	
 }

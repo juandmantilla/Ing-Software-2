@@ -1,7 +1,7 @@
 /* Clase encargada de cargar todos los objetos u elementos
  * responsables del correcto funcionamiento del juego
  * @author : Juan Mantilla - Felipe Peña	
- * @version : 17 de Julio de 2019
+ * @version : 23 de Julio de 2019
  *  */
 package solarMe;
 
@@ -11,6 +11,8 @@ public class Juego
 {	
 	// Objeto Planetario de inicio del juego
 	OA objeto = new OA("Sol",true);
+	
+	
 	
 	//Lector de Scanner
 	Scanner scanner = new Scanner(System.in);
@@ -33,7 +35,7 @@ public class Juego
 			/* Menú de inicio */
 			System.out.println("Bienvenido a SolarMe");
 			System.out.println("Seleccione lo que desee realizar");
-			System.out.println("1) Jugar");
+			System.out.println("1) Iniciar");
 			System.out.println("2) Acerca");
 			System.out.println("3) Salir");
 			entrada2 = scanner.nextLine();
@@ -57,11 +59,29 @@ public class Juego
 						objeto.imprimirInformacion();
 						System.out.println("1) Volver");
 						entrada2 = scanner.nextLine();
+						
 						if(entrada2.equals("1"))
 							entrada2 = "volver";
-						
 						break;
 					case "2":
+						int i = 0;
+						Cuestionario c1 = new Cuestionario(objeto);
+						c1.cargarPreguntas();
+						while(i<=3)
+						{
+							c1.imprimirPregunta(objeto, i);
+							System.out.println("Teclee la respuesta");
+							entrada = scanner.nextLine();
+							if(entrada.equals(c1.getRespuesta(objeto, i)))
+							{
+								System.out.println("Ha ganado 1 punto");
+							}
+							else
+							{
+								System.out.println("Ha fallado en la respuesta");
+							}
+							i++;
+						}
 						
 						if(entrada2.equals("1"))
 							entrada2 = "volver";
