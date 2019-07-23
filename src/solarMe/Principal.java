@@ -12,11 +12,7 @@ public class Principal
 	{
 	 Juego juego = new Juego();
 	 juego.lanzarJuego();
-	 
-<<<<<<< Updated upstream
-	c1.imprimirPreguntas();
-=======
->>>>>>> Stashed changes
+
 	
 
 			
