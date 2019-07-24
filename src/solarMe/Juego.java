@@ -66,9 +66,12 @@ public class Juego
 						break;
 					case "2":
 						int i = 0;
+						int cont = 0;
+						
+						
 						Cuestionario c1 = new Cuestionario(objeto);
 						c1.cargarPreguntas();
-						while(i<c1.getTamanoPreguntas())
+						while(i<c1.getTamanoPreguntas(objeto))
 						{
 							c1.imprimirPregunta(objeto, i);
 							c1.cargarRespuestas();
@@ -77,20 +80,26 @@ public class Juego
 							
 							
 							if(entrada.equals(c1.getRespuesta(objeto, i)))
-							{
+							{	
 								System.out.println("Ha ganado 1 punto");
 								i++;
-								System.out.println(i);
+								jugador.setPuntaje(cont+1);
+								cont++;
 								
 							}
 							else
-							{
+							{	
+								
 								System.out.println("No ha ganado ningún punto");
 								i++;
-								System.out.println(i);
+								
 							}
 							
 						}
+						
+						System.out.println("Tus puntos totales " + jugador.getPuntaje());
+						System.out.println();
+						jugador.subirNivel(objeto, c1);
 						
 						if(entrada2.equals("1"))
 							entrada2 = "volver";

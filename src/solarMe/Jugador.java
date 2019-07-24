@@ -10,7 +10,7 @@ import java.util.ArrayList;
 public class Jugador
 {
 	//Guarda el puntaje acumulado por cada OA que recorra el Jugador
-	private int puntaje;
+	private float puntaje;
 	
 	//@param puntaje variable responsable de asignar el puntaje al comienzo del juego
 	public Jugador()
@@ -24,18 +24,23 @@ public class Jugador
 		this.puntaje = puntaje;
 	}
 	
-	public int getPuntaje()
+	public float getPuntaje()
 	{
 		return puntaje;
 	}
 	
 	public void subirNivel(OA objeto, Cuestionario cuestionario)
 	{	int contador = 0;
+		cuestionario.cargarPreguntas();
 		
-		if((puntaje/cuestionario.getTamanoPreguntas())>= (cuestionario.getTamanoRespuestas()*0.9))
+		if(puntaje/cuestionario.getTamanoPreguntas(objeto)>= cuestionario.getTamanoPreguntas(objeto)*0.9)
 		{
+			System.out.println("------------");
+			System.out.println(cuestionario.getTamanoPreguntas(objeto));
+			System.out.println("------------");
+			
 			objeto.setNombre(objeto.getListaPlaneta().get(contador+1));
-			System.out.println("Has subido de  nivel!" + objeto.getNombre());
+			System.out.println("Has subido de  nivel! Felicitaciones ! " + objeto.getNombre());
 			
 		}
 		else

@@ -326,9 +326,45 @@ public class Cuestionario
 		return texto;
 	}
 
-	public int getTamanoPreguntas()
+	public int getTamanoPreguntas(OA objeto)
 	{
-		return preguntasSol.size();
+		int resp = 0 ;
+		switch (objeto.getNombre()) {
+		case "Sol":
+			resp = preguntasSol.size();
+			break;
+		case "Mercurio":
+			resp = preguntasMercurio.size();
+			break;
+		case "Venus":
+			resp = preguntasVenus.size();
+			break;
+		case "Tierra":
+			resp = preguntasTierra.size();
+			break;
+		case "Marte":
+			resp = preguntasMarte.size();
+			break;
+		case "Jupiter":
+			resp = preguntasJupiter.size();
+			break;
+		case "Saturno":
+			resp = preguntasSaturno.size();
+			break;
+		case "Urano":
+			resp = preguntasUrano .size();
+			break;
+		case "Neptuno":
+			resp = preguntasNeptuno.size();
+			break;
+		case "Pluton":
+			resp = preguntasPluton.size();
+			break;
+
+		
+		}
+		return resp;
+		
 	}
 	
 	public int getTamanoRespuestas()
