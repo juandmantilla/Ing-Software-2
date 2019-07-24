@@ -10,7 +10,7 @@ import java.util.Scanner;
 public class Juego 
 {	
 	// Objeto Planetario de inicio del juego
-	OA objeto = new OA("Sol",true);
+	OA objeto = new OA("Sol");
 	
 	//Lector de Scanner
 	Scanner scanner = new Scanner(System.in);
@@ -68,7 +68,7 @@ public class Juego
 						int i = 0;
 						Cuestionario c1 = new Cuestionario(objeto);
 						c1.cargarPreguntas();
-						while(i<=3)
+						while(i<=c1.getTamanoPreguntas())
 						{
 							c1.cargarPreguntas();
 							c1.imprimirPregunta(objeto, i);

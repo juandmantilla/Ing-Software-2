@@ -197,8 +197,7 @@ public class Cuestionario
 		case "Pluton":
 			System.out.println(preguntasPluton.get(numPregunta));
 			break;
-			
-
+		
 		}
 	}
 	
@@ -400,6 +399,17 @@ public class Cuestionario
 		}
 		return texto;
 	}
+
+	public int getTamanoPreguntas()
+	{
+		return preguntasSol.size();
+	}
+	
+	public int getTamanoRespuestas()
+	{
+		return respuestasJupiter.size();
+	}
+	
 }
 
 

@@ -10,6 +10,7 @@ package solarMe;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.util.ArrayList;
 
 public class OA
 {
@@ -19,14 +20,25 @@ public class OA
 	//Información relacionada al OA 
 	private String informacion;
 	
-	// Variable estado indica si el objeto se inicializó y se está usando
-	private boolean estado;
+	
+	//ArrayList que guarda los diferentes nombres de los planetas
+	//Usado en clase Jugador
+	private ArrayList<String> listaPlanetas = new ArrayList<String>();
 
 
-	public OA(String nombre, boolean estado)
+	public OA(String nombre)
 	{
 		this.nombre = nombre;
-		this.estado = estado;
+		this.listaPlanetas.add("Sol");
+		this.listaPlanetas.add("Mercurio");
+		this.listaPlanetas.add("Venus");
+		this.listaPlanetas.add("Tierra");
+		this.listaPlanetas.add("Marte");
+		this.listaPlanetas.add("Jupiter");
+		this.listaPlanetas.add("Saturno");
+		this.listaPlanetas.add("Urano");
+		this.listaPlanetas.add("Neptuno");
+		this.listaPlanetas.add("Pluton");
 	}
    	
 	public String getNombre()
@@ -39,15 +51,7 @@ public class OA
 		this.nombre = nombre;
 	}
 	
-	public boolean getEstado()
-	{
-		return this.estado;
-	}
 	
-	public void setEstado(boolean estado)
-	{
-		this.estado = estado;
-	}
 	
 	/* Este método carga la información del OA a través de un archivo de texto externo*/
 	public String cargarInformacion()
@@ -126,5 +130,10 @@ public class OA
 		return texto;
 	}
 
+	public ArrayList<String> getListaPlaneta()
+	{
+		return this.listaPlanetas;
+	}
+	
 
 }
