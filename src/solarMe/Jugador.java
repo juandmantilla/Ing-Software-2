@@ -35,19 +35,24 @@ public class Jugador
 	public void subirNivel(OA objeto, Cuestionario cuestionario)
 	{	
 		
-		System.out.println("------------");
-		
-		if((puntaje)>= (cuestionario.getTamanoPreguntas(objeto)*0.8))
+		System.out.println("-----------------------------");
+		System.out.println(getPuntaje());
+		if((getPuntaje())>= (cuestionario.getTamanoPreguntas(objeto)*0.8))
 		{
 			objeto.setNombre(objeto.getListaPlaneta().get(contador+1));
 			System.out.println("Has subido al nivel " + objeto.getNombre() + ". Felicidades!");
 			cuestionario.setNombreCuestionario(objeto.getListaPlaneta().get(contador+1));
 			contador++;
+			setPuntaje(0);
 		}
-		else
+		else if(getPuntaje() < (cuestionario.getTamanoPreguntas(objeto)*0.8))
 		{
 			System.out.println("Has quedado en el mismo nivel " + objeto.getNombre());
-			System.out.println(cuestionario.getTamanoPreguntas(objeto));
+			setPuntaje(0);
+		} 
+		else
+		{
+			System.out.println( "No se ha podido calificar");
 		}
 	}
 	

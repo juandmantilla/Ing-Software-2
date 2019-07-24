@@ -377,6 +377,8 @@ public class Cuestionario
 		return respuestasJupiter.size();
 	}
 	
+	
+	
 }
 
 
