@@ -326,9 +326,9 @@ public class Cuestionario
 		return texto;
 	}
 
-	public int getTamanoPreguntas(OA objeto)
+	public float getTamanoPreguntas(OA objeto)
 	{
-		int resp = 0 ;
+		float resp = 0;
 		switch (objeto.getNombre()) {
 		case "Sol":
 			resp = preguntasSol.size();
@@ -360,8 +360,6 @@ public class Cuestionario
 		case "Pluton":
 			resp = preguntasPluton.size();
 			break;
-
-		
 		}
 		return resp;
 		

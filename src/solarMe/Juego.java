@@ -18,6 +18,9 @@ public class Juego
 	//Objeto de Jugador
 	Jugador jugador = new Jugador();
 	
+	//Objeto de Cuestionario
+	Cuestionario cuestionario = new Cuestionario(objeto);
+	
 	//Las variables entrada1 y entrada2 almacenan las entrada de teclado del jugador
 	String entrada, entrada2;
 	
@@ -69,7 +72,8 @@ public class Juego
 					case "2":
 						// Muestra el cuestionario para la OA
 						iniciarCuestionario();
-						
+						System.out.println("1) Volver");
+						entrada2 = scanner.nextLine();
 						if(entrada2.equals("1"))
 							entrada2 = "volver";
 						break;
@@ -129,37 +133,34 @@ public class Juego
 		int i = 0;
 		int cont = 0;
 		
-		Cuestionario c1 = new Cuestionario(objeto);
-		c1.cargarPreguntas();
+		cuestionario.cargarPreguntas();
+		cuestionario.cargarRespuestas();
 		
-		while(i<c1.getTamanoPreguntas(objeto))
-		{
-			c1.imprimirPregunta(objeto, i);
-			c1.cargarRespuestas();
+		while(i<cuestionario.getTamanoPreguntas(objeto))
+		{	
+			cuestionario.imprimirPregunta(objeto, i);
 			System.out.println("Teclee la respuesta");
 			entrada = scanner.nextLine();
 			
-			if(entrada.equals(c1.getRespuesta(objeto, i)))
+			if(entrada.equals(cuestionario.getRespuesta(objeto, i)))
 			{	
 				System.out.println("Ha ganado 1 punto");
 				i++;
 				jugador.setPuntaje(cont+1);
 				cont++;
-				
 			}
 			else
 			{	
-				
 				System.out.println("No ha ganado ningún punto");
 				i++;
-				
 			}
 			
 		}
 		
 		System.out.println("Tus puntos totales " + jugador.getPuntaje());
 		System.out.println();
-		jugador.subirNivel(objeto, c1);
+		jugador.subirNivel(objeto, cuestionario);
+		
 	}
 
 }
