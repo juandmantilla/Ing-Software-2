@@ -1,0 +1,5 @@
+En Mercurio es un planeta...
+1) Gaseoso
+2) Terrestre
+3) Rocoso
+4) Plasmático

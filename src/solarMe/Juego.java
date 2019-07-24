@@ -71,7 +71,7 @@ public class Juego
 						break;
 					case "2":
 						// Muestra el cuestionario para la OA
-						iniciarCuestionario();
+						iniciarCuestionario(cuestionario);
 						System.out.println("1) Volver");
 						entrada2 = scanner.nextLine();
 						if(entrada2.equals("1"))
@@ -128,7 +128,7 @@ public class Juego
 	}
 	
 	//Método que inicia el cuestionario con las diferentes preguntas
-	public void iniciarCuestionario()
+	public void iniciarCuestionario(Cuestionario cuestionario)
 	{
 		int i = 0;
 		int cont = 0;

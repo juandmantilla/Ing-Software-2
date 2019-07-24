@@ -12,6 +12,9 @@ public class Jugador
 	//Guarda el puntaje acumulado por cada OA que recorra el Jugador
 	private float puntaje;
 	
+	//Contador guarda los valores para aumentar de nivel (OA)
+	int contador = 0;
+	
 	//@param puntaje variable responsable de asignar el puntaje al comienzo del juego
 	public Jugador()
 	{
@@ -30,19 +33,19 @@ public class Jugador
 	}
 	
 	public void subirNivel(OA objeto, Cuestionario cuestionario)
-	{	int contador = 0;
+	{	
 		
-	System.out.println("------------");
+		System.out.println("------------");
 		
 		if((puntaje)>= (cuestionario.getTamanoPreguntas(objeto)*0.8))
 		{
 			objeto.setNombre(objeto.getListaPlaneta().get(contador+1));
-			System.out.println("Has subido de  nivel! Felicitaciones ! " + objeto.getNombre());
-			
+			System.out.println("Has subido al nivel " + objeto.getNombre() + ". Felicidades!");
+			cuestionario.setNombreCuestionario(objeto.getListaPlaneta().get(contador+1));
+			contador++;
 		}
 		else
 		{
-			
 			System.out.println("Has quedado en el mismo nivel " + objeto.getNombre());
 			System.out.println(cuestionario.getTamanoPreguntas(objeto));
 		}

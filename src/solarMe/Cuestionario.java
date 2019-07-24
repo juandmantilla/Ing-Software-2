@@ -12,7 +12,7 @@ import java.util.ArrayList;
 public class Cuestionario
 {
 		
-	private String nombreCuestionario = "";
+	private String nombreCuestionario;
 	
 	//ArrayList's que guardan las diferentes preguntas
 	private ArrayList<String> preguntasSol = new ArrayList<String>();
@@ -46,8 +46,15 @@ public class Cuestionario
 		this.nombreCuestionario = objeto.getNombre();
 	}
 	
-		
+	public void setNombreCuestionario(String nombre)
+	{
+		this.nombreCuestionario = nombre;
+	}
 	
+	public String getNombreCuestionario()
+	{
+		return this.nombreCuestionario;
+	}
 	// Carga en los diferentes ArrayList las preguntas de lo OA
 	// Cada pregunta tiene un archivo .txt asociado
 	public void cargarPreguntas()
