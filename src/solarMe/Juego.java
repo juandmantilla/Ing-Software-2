@@ -55,6 +55,8 @@ public class Juego
 					switch (entrada2)
 					{
 					case "1":
+						
+						//Muestra información del OA
 						objeto.getNombre();
 						objeto.cargarInformacion();
 						objeto.imprimirInformacion();
@@ -65,41 +67,8 @@ public class Juego
 							entrada2 = "volver";
 						break;
 					case "2":
-						int i = 0;
-						int cont = 0;
-						
-						
-						Cuestionario c1 = new Cuestionario(objeto);
-						c1.cargarPreguntas();
-						while(i<c1.getTamanoPreguntas(objeto))
-						{
-							c1.imprimirPregunta(objeto, i);
-							c1.cargarRespuestas();
-							System.out.println("Teclee la respuesta");
-							entrada = scanner.nextLine();
-							
-							
-							if(entrada.equals(c1.getRespuesta(objeto, i)))
-							{	
-								System.out.println("Ha ganado 1 punto");
-								i++;
-								jugador.setPuntaje(cont+1);
-								cont++;
-								
-							}
-							else
-							{	
-								
-								System.out.println("No ha ganado ningún punto");
-								i++;
-								
-							}
-							
-						}
-						
-						System.out.println("Tus puntos totales " + jugador.getPuntaje());
-						System.out.println();
-						jugador.subirNivel(objeto, c1);
+						// Muestra el cuestionario para la OA
+						iniciarCuestionario();
 						
 						if(entrada2.equals("1"))
 							entrada2 = "volver";
@@ -152,6 +121,45 @@ public class Juego
 	
 	
 	
+	}
+	
+	//Método que inicia el cuestionario con las diferentes preguntas
+	public void iniciarCuestionario()
+	{
+		int i = 0;
+		int cont = 0;
+		
+		Cuestionario c1 = new Cuestionario(objeto);
+		c1.cargarPreguntas();
+		
+		while(i<c1.getTamanoPreguntas(objeto))
+		{
+			c1.imprimirPregunta(objeto, i);
+			c1.cargarRespuestas();
+			System.out.println("Teclee la respuesta");
+			entrada = scanner.nextLine();
+			
+			if(entrada.equals(c1.getRespuesta(objeto, i)))
+			{	
+				System.out.println("Ha ganado 1 punto");
+				i++;
+				jugador.setPuntaje(cont+1);
+				cont++;
+				
+			}
+			else
+			{	
+				
+				System.out.println("No ha ganado ningún punto");
+				i++;
+				
+			}
+			
+		}
+		
+		System.out.println("Tus puntos totales " + jugador.getPuntaje());
+		System.out.println();
+		jugador.subirNivel(objeto, c1);
 	}
 
 }
