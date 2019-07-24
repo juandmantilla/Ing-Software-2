@@ -68,23 +68,28 @@ public class Juego
 						int i = 0;
 						Cuestionario c1 = new Cuestionario(objeto);
 						c1.cargarPreguntas();
-						while(i<=c1.getTamanoPreguntas())
+						while(i<c1.getTamanoPreguntas())
 						{
-							c1.cargarPreguntas();
 							c1.imprimirPregunta(objeto, i);
 							c1.cargarRespuestas();
 							System.out.println("Teclee la respuesta");
 							entrada = scanner.nextLine();
+							
+							
 							if(entrada.equals(c1.getRespuesta(objeto, i)))
 							{
 								System.out.println("Ha ganado 1 punto");
+								i++;
+								System.out.println(i);
 								
 							}
 							else
 							{
 								System.out.println("No ha ganado ningún punto");
+								i++;
+								System.out.println(i);
 							}
-							i++;
+							
 						}
 						
 						if(entrada2.equals("1"))
