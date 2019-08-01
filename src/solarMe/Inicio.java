@@ -15,6 +15,8 @@ import javax.swing.LayoutStyle.ComponentPlacement;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.Font;
+import javax.swing.JLabel;
+import javax.swing.ImageIcon;
 
 public class Inicio extends JFrame {
 
@@ -71,21 +73,32 @@ public class Inicio extends JFrame {
 		btnSalir.setFont(new Font("Ubuntu", Font.PLAIN, 17));
 		btnSalir.setForeground(Color.WHITE);
 		btnSalir.setBackground(new Color(0, 153, 204));
+		
+		JLabel lblNewLabel = new JLabel("New label");
+		lblNewLabel.setIcon(new ImageIcon("/home/juan/Documentos/IngSoftII/SolarMe/Ing-Software-2/img/OA/logo.png"));
+		
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
 		gl_contentPane.setHorizontalGroup(
-			gl_contentPane.createParallelGroup(Alignment.TRAILING)
+			gl_contentPane.createParallelGroup(Alignment.LEADING)
 				.addGroup(gl_contentPane.createSequentialGroup()
-					.addContainerGap(286, Short.MAX_VALUE)
+					.addContainerGap(80, Short.MAX_VALUE)
 					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
-						.addComponent(btnSalir, GroupLayout.PREFERRED_SIZE, 126, GroupLayout.PREFERRED_SIZE)
-						.addComponent(btnInicio, GroupLayout.PREFERRED_SIZE, 126, GroupLayout.PREFERRED_SIZE)
-						.addComponent(btnAcerca, GroupLayout.PREFERRED_SIZE, 126, GroupLayout.PREFERRED_SIZE))
-					.addGap(276))
+						.addGroup(Alignment.TRAILING, gl_contentPane.createSequentialGroup()
+							.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
+								.addComponent(btnSalir, GroupLayout.PREFERRED_SIZE, 126, GroupLayout.PREFERRED_SIZE)
+								.addComponent(btnInicio, GroupLayout.PREFERRED_SIZE, 126, GroupLayout.PREFERRED_SIZE)
+								.addComponent(btnAcerca, GroupLayout.PREFERRED_SIZE, 126, GroupLayout.PREFERRED_SIZE))
+							.addGap(276))
+						.addGroup(Alignment.TRAILING, gl_contentPane.createSequentialGroup()
+							.addComponent(lblNewLabel, GroupLayout.PREFERRED_SIZE, 539, GroupLayout.PREFERRED_SIZE)
+							.addGap(69))))
 		);
 		gl_contentPane.setVerticalGroup(
 			gl_contentPane.createParallelGroup(Alignment.TRAILING)
 				.addGroup(gl_contentPane.createSequentialGroup()
-					.addContainerGap(240, Short.MAX_VALUE)
+					.addContainerGap(92, Short.MAX_VALUE)
+					.addComponent(lblNewLabel)
+					.addGap(36)
 					.addComponent(btnInicio)
 					.addPreferredGap(ComponentPlacement.RELATED)
 					.addComponent(btnAcerca)
@@ -96,8 +109,4 @@ public class Inicio extends JFrame {
 		contentPane.setLayout(gl_contentPane);
 		setLocationRelativeTo(null);
 	}
-
-	
-	
-	
 }
