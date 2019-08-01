@@ -21,7 +21,7 @@ public class Juego
 	//Objeto de Cuestionario
 	Cuestionario cuestionario = new Cuestionario(objeto);
 	
-	//Las variables entrada1 y entrada2 almacenan las entrada de teclado del jugador
+	//Las variables entrada1 y entrada2 almacenan las entrada del Jugador
 	String entrada, entrada2;
 	
 	// Constructor de Juego, inicialización de variables
@@ -128,6 +128,7 @@ public class Juego
 	}
 	
 	//Método que inicia el cuestionario con las diferentes preguntas
+	//@param cuestionario para la carga de preguntas y respuestas
 	public void iniciarCuestionario(Cuestionario cuestionario)
 	{
 		int i = 0;

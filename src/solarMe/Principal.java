@@ -13,14 +13,7 @@ public class Principal
 	 Juego juego = new Juego();
 	 juego.lanzarJuego();
          
-         /*Vis b=new Vis();
-            b.nombrej("sol");
-           
-            b.asignar_ruta("sol.txt");
-            
-            b.setVisible(true);
-         si quiere orobar la vista
-            */
+         
 
 	
 	

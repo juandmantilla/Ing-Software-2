@@ -372,12 +372,84 @@ public class Cuestionario
 		
 	}
 	
-	public int getTamanoRespuestas()
+	//Devuelve el tamaño 
+	public int getTamanoRespuestas(OA objeto)
 	{
-		return respuestasJupiter.size();
+		int resp = 0;
+		switch (objeto.getNombre()) {
+		case "Sol":
+			resp = respuestasSol.size();
+			break;
+		case "Mercurio":
+			resp = respuestasMercurio.size();
+			break;
+		case "Venus":
+			resp = respuestasVenus.size();
+			break;
+		case "Tierra":
+			resp = respuestasTierra.size();
+			break;
+		case "Marte":
+			resp = respuestasMarte.size();
+			break;
+		case "Jupiter":
+			resp = respuestasJupiter.size();
+			break;
+		case "Saturno":
+			resp = respuestasSaturno.size();
+			break;
+		case "Urano":
+			resp = respuestasUrano.size();
+			break;
+		case "Neptuno":
+			resp = respuestasUrano.size();
+			break;
+		case "Pluton":
+			resp = respuestasPluton.size();
+			break;
+		}
+		return resp;
 	}
 	
+	//Método que reinicia el arrayList de los cuestionarios de OA
+	public void reiniciarArrayList(OA objeto)
+	{
+		
+		switch (objeto.getNombre()) {
+		case "Sol":
+			preguntasSol = new ArrayList<String>();
+			break;
+		case "Mercurio":
+			preguntasMercurio = new ArrayList<String>();
+			break;
+		case "Venus":
+			preguntasVenus = new ArrayList<String>();
+			break;
+		case "Tierra":
+			preguntasTierra = new ArrayList<String>();
+			break;
+		case "Marte":
+			preguntasMarte = new ArrayList<String>();
+			break;
+		case "Jupiter":
+			preguntasJupiter = new ArrayList<String>();
+			break;
+		case "Saturno":
+			preguntasSaturno = new ArrayList<String>();
+			break;
+		case "Urano":
+			preguntasUrano = new ArrayList<String>();
+			break;
+		case "Neptuno":
+			preguntasNeptuno = new ArrayList<String>();
+			break;
+		case "Pluton":
+			preguntasPluton = new ArrayList<String>();
+			break;
+			
+		}
 	
+	}
 	
 }
 

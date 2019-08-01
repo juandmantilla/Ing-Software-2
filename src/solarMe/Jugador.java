@@ -5,8 +5,6 @@
  *  */
 package solarMe;
 
-import java.util.ArrayList;
-
 public class Jugador
 {
 	//Guarda el puntaje acumulado por cada OA que recorra el Jugador
@@ -33,10 +31,8 @@ public class Jugador
 	}
 	
 	public void subirNivel(OA objeto, Cuestionario cuestionario)
-	{	
+	{	System.out.println("----------------------------------");
 		
-		System.out.println("-----------------------------");
-		System.out.println(getPuntaje());
 		if((getPuntaje())>= (cuestionario.getTamanoPreguntas(objeto)*0.8))
 		{
 			objeto.setNombre(objeto.getListaPlaneta().get(contador+1));
@@ -44,11 +40,15 @@ public class Jugador
 			cuestionario.setNombreCuestionario(objeto.getListaPlaneta().get(contador+1));
 			contador++;
 			setPuntaje(0);
+			cuestionario.reiniciarArrayList(objeto);
+			
 		}
 		else if(getPuntaje() < (cuestionario.getTamanoPreguntas(objeto)*0.8))
 		{
 			System.out.println("Has quedado en el mismo nivel " + objeto.getNombre());
 			setPuntaje(0);
+			cuestionario.reiniciarArrayList(objeto);
+			
 		} 
 		else
 		{
